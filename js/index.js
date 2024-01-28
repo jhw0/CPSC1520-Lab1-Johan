@@ -35,8 +35,15 @@ function onClickOutsideDialog(e)
             e.clientY > dialogDimensions.bottom
         )
     {
+        resetForm();
         e.currentTarget.close();
     }
+}
+
+function resetForm()
+{
+    const form = document.querySelector("form");
+    form.reset();
 }
 
 function onUpdateProfile(e)
